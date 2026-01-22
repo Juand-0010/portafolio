@@ -1,138 +1,139 @@
-/* CONTENEDOR GENERAL */
-.portfolio-container {
-  min-height: 100vh;
-  width: 100%;
-  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-  color: #ffffff;
-  display: flex;
+/* =========================
+   PROJECTS
+========================= */
+.projects {
+  padding: 80px 10%;
+  background-color: transparent;
+  text-align: center;
 }
 
-/* FOTO FLOTANTE */
-.profile-float {
-  position: fixed;
-  top: 40px;
-  left: 40px;
-  width: 180px;
-  height: 180px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-  cursor: pointer;
-  z-index: 100;
+.projects h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  font-weight: 600;
 }
 
-/* IMAGEN */
-.profile-float img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px; /* separación exacta de 10px */
+  max-width: 1100px;
+  margin: auto;
 }
 
-/* MENU OCULTO */
-.contact-menu {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+/* CARD */
+.project-card {
+  background: var(--bg-card);
+  padding: 28px;
+  border-radius: var(--radius);
+  border: 1px solid #1e293b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.project-card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 /* HOVER */
-.profile-float:hover .contact-menu {
-  opacity: 1;
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(56, 189, 248, 0.25);
 }
 
 /* LINKS */
-.contact-menu a {
-  color: #00eaff;
+.projects a {
   text-decoration: none;
-  font-size: 14px;
-  transition: transform 0.3s;
+  color: inherit;
 }
 
-.contact-menu a:hover {
-  transform: scale(1.1);
+
+/* GRID — separación EXACTA de 10px */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px; /* ← AQUÍ están los 10px */
+  max-width: 1100px;
+  margin: auto;
 }
 
-/* CONTENIDO */
-.content {
-  margin-left: 280px;
-  padding: 80px 60px;
-  max-width: 900px;
+/* CARD */
+.project-card {
+  background: #0f172a;
+  padding: 32px;
+  border-radius: 18px;
+  border: 1px solid #1e293b;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s;
 }
 
-/* TITULOS */
-.content h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.content h2 {
-  font-size: 22px;
-  font-weight: 300;
-  margin-bottom: 30px;
-  color: #9ad7ff;
+/* TÍTULO */
+.project-card h3 {
+  color: #38bdf8;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
 }
 
 /* TEXTO */
-.intro {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 40px;
-}
-
-/* SECCIONES */
-section {
-  margin-bottom: 40px;
-}
-
-section h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  color: #00eaff;
-}
-
-section p,
-section li {
-  font-size: 16px;
+.project-card p {
+  color: #cbd5f5;
+  font-size: 0.95rem;
   line-height: 1.6;
 }
 
-ul {
-  padding-left: 20px;
+/* HOVER */
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+  box-shadow: 0 15px 30px rgba(56, 189, 248, 0.25);
 }
 
-/* FOOTER CONTACTO */
-.footer-contact {
-  margin-top: 80px;
-  padding-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+/* BOTÓN */
+.project-buttons {
+  margin-top: 20px;
 }
 
-.footer-contact h3 {
-  color: #00eaff;
-  margin-bottom: 20px;
-}
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-}
-
-.footer-links a {
-  color: #ffffff;
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
   text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s, transform 0.3s;
+  transition: all 0.3s ease;
 }
 
-.footer-links a:hover {
-  color: #00eaff;
-  transform: translateY(-2px);
+/* GITHUB */
+.btn.github {
+  background: transparent;
+  color: #38bdf8;
+  border: 1px solid #38bdf8;
+}
+
+.btn.github:hover {
+  background: #38bdf8;
+  color: #020617;
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .projects h2 {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    padding: 26px;
+  }
 }

@@ -1,0 +1,138 @@
+/* CONTENEDOR GENERAL */
+.portfolio-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  display: flex;
+}
+
+/* FOTO FLOTANTE */
+.profile-float {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  z-index: 100;
+}
+
+/* IMAGEN */
+.profile-float img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* MENU OCULTO */
+.contact-menu {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* HOVER */
+.profile-float:hover .contact-menu {
+  opacity: 1;
+}
+
+/* LINKS */
+.contact-menu a {
+  color: #00eaff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: transform 0.3s;
+}
+
+.contact-menu a:hover {
+  transform: scale(1.1);
+}
+
+/* CONTENIDO */
+.content {
+  margin-left: 280px;
+  padding: 80px 60px;
+  max-width: 900px;
+}
+
+/* TITULOS */
+.content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.content h2 {
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  color: #9ad7ff;
+}
+
+/* TEXTO */
+.intro {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* SECCIONES */
+section {
+  margin-bottom: 40px;
+}
+
+section h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #00eaff;
+}
+
+section p,
+section li {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* FOOTER CONTACTO */
+.footer-contact {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-contact h3 {
+  color: #00eaff;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-links a:hover {
+  color: #00eaff;
+  transform: translateY(-2px);
+}

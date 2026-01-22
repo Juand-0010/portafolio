@@ -1,7 +1,5 @@
 import "./Profile.css";
 import perfil from "../assets/imagen-chat-hoja-de-vida.png";
-import TypingName from "./TypingName";
-
 
 export default function Profile() {
   return (
@@ -13,24 +11,16 @@ export default function Profile() {
         <div className="contact-menu">
           <a href="mailto:correo@email.com">📧 Email</a>
           <a
-            href="https://wa.me/573001234567"
+            href="https://wa.me/573001234567?text=Hola%20Juan%20Diego,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte"
             target="_blank"
             rel="noopener noreferrer"
           >
             📱 WhatsApp
           </a>
-          <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
             💼 LinkedIn
           </a>
-          <a
-            href="https://github.com/Juand-0010"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
             🐙 GitHub
           </a>
         </div>
@@ -38,10 +28,7 @@ export default function Profile() {
 
       {/* CONTENIDO */}
       <section className="content">
-        <h1>
-          Hola, soy <TypingName /> 👋
-          </h1>
-
+        <h1>Hola, soy Juan Diego 👋</h1>
         <h2>Estudiante de Ingeniería de Sistemas 💻</h2>
 
         <p className="intro">
@@ -55,7 +42,8 @@ export default function Profile() {
           <p>
             Soy estudiante universitario con un fuerte interés en el desarrollo
             de software y el diseño web 🎨. Me motiva transformar ideas en proyectos
-            reales y mejorar constantemente a través de la práctica.
+            reales, experimentar con interfaces modernas y mejorar constantemente
+            a través de la práctica.
           </p>
         </section>
 
@@ -64,8 +52,8 @@ export default function Profile() {
           <ul>
             <li>Desarrollo de interfaces web con React ⚛️</li>
             <li>Diseño de experiencias simples y modernas ✨</li>
-            <li>Creación de proyectos personales 📚</li>
-            <li>Uso de Git y GitHub 🔧</li>
+            <li>Creación de proyectos personales para aprender 📚</li>
+            <li>Control de versiones con Git y GitHub 🔧</li>
           </ul>
         </section>
 
@@ -78,32 +66,33 @@ export default function Profile() {
             <li>Vite</li>
           </ul>
         </section>
+
+        <section>
+          <h3>Proyectos 🗂️</h3>
+          <p>
+            Aquí presento algunos proyectos personales y académicos donde aplico
+            lo que voy aprendiendo 🛠️, buscando siempre que sean funcionales,
+            claros y bien diseñados.
+          </p>
+        </section>
       </section>
 
-      {/* CONTACTO INFERIOR */}
+      {/* CONTACTOS INFERIORES */}
       <footer className="footer-contact">
         <h3>Contacto</h3>
         <div className="footer-links">
           <a href="mailto:correo@email.com">📧 Email</a>
           <a
-            href="https://wa.me/573001234567"
+            href="https://wa.me/573001234567?text=Hola%20Juan%20Diego,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte"
             target="_blank"
             rel="noopener noreferrer"
           >
             📱 WhatsApp
           </a>
-          <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
             💼 LinkedIn
           </a>
-          <a
-            href="https://github.com/Juand-0010"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
             🐙 GitHub
           </a>
         </div>
