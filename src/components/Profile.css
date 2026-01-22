@@ -1,139 +1,95 @@
-/* =========================
-   PROJECTS
-========================= */
-.projects {
-  padding: 80px 10%;
-  background-color: transparent;
-  text-align: center;
-}
-
-.projects h2 {
-  font-size: 2.4rem;
-  margin-bottom: 40px;
-  font-weight: 600;
-}
-
-/* GRID */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 10px; /* separación exacta de 10px */
-  max-width: 1100px;
-  margin: auto;
-}
-
-/* CARD */
-.project-card {
-  background: var(--bg-card);
-  padding: 28px;
-  border-radius: var(--radius);
-  border: 1px solid #1e293b;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
-}
-
-.project-card h3 {
-  color: #38bdf8;
-  margin-bottom: 10px;
-  font-size: 1.3rem;
-}
-
-.project-card p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* HOVER */
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(56, 189, 248, 0.25);
-}
-
-/* LINKS */
-.projects a {
-  text-decoration: none;
-  color: inherit;
-}
-
-
-/* GRID — separación EXACTA de 10px */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 10px; /* ← AQUÍ están los 10px */
-  max-width: 1100px;
-  margin: auto;
-}
-
-/* CARD */
-.project-card {
-  background: #0f172a;
-  padding: 32px;
-  border-radius: 18px;
-  border: 1px solid #1e293b;
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s;
-}
-
-/* TÍTULO */
-.project-card h3 {
-  color: #38bdf8;
-  margin-bottom: 12px;
-  font-size: 1.3rem;
-}
-
-/* TEXTO */
-.project-card p {
-  color: #cbd5f5;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* HOVER */
-.project-card:hover {
-  transform: translateY(-5px);
-  border-color: #38bdf8;
-  box-shadow: 0 15px 30px rgba(56, 189, 248, 0.25);
-}
-
-/* BOTÓN */
-.project-buttons {
-  margin-top: 20px;
-}
-
-.btn {
-  display: block;
+/* Contenedor principal: foto a la izquierda, contenido a la derecha */
+.portfolio-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 40px 40px;
+  font-family: 'Arial', sans-serif;
   width: 100%;
-  padding: 12px 0;
-  border-radius: 10px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  max-width: 1600px;
+  margin: auto;
+  color: #ffffff; /* texto blanco brillante */
+  gap: 50px; /* espacio entre foto y contenido */
+}
+
+/* FOTO LATERAL sticky y compacta */
+.profile-side {
+  width: 180px;
+  min-width: 160px;
+  position: sticky;
+  top: 20px;
   text-align: center;
+}
+
+/* Imagen de perfil circular */
+.profile-side img {
+  width: 100%;
+  max-width: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+}
+
+/* Contacto lateral compacto */
+.contact-mini {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.contact-mini a {
+  color: #ffffff;
+  font-weight: bold;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.2s;
 }
 
-/* GITHUB */
-.btn.github {
-  background: transparent;
-  color: #38bdf8;
-  border: 1px solid #38bdf8;
+.contact-mini a:hover {
+  color: #00ffff;
 }
 
-.btn.github:hover {
-  background: #38bdf8;
-  color: #020617;
-  transform: translateY(-3px);
+/* CONTENIDO PRINCIPAL con máximo espacio */
+.content-main {
+  flex: 1; /* ocupa todo el espacio restante */
+  line-height: 1.8;
+  max-width: none; /* sin límite de ancho */
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  .projects h2 {
-    font-size: 2rem;
+/* Texto blanco brillante */
+.content-main h1, .content-main h2, .content-main h3,
+.content-main p, .content-main li {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Responsive tablet y móvil */
+@media (max-width: 1200px) {
+  .portfolio-container {
+    padding: 30px 40px;
+    gap: 40px;
   }
+  .profile-side {
+    width: 160px;
+  }
+}
 
-  .project-card {
-    padding: 26px;
+@media (max-width: 768px) {
+  .portfolio-container {
+    flex-direction: column;
+    padding: 20px 20px;
+    gap: 20px;
+  }
+  .profile-side {
+    position: relative;
+    width: 100%;
+    top: 0;
+    margin-bottom: 20px;
+  }
+  .content-main {
+    max-width: 100%;
   }
 }
